@@ -10,7 +10,7 @@ doc = acad.ActiveDocument
 
 
 def get_num(s):
-    return float("".join(char for char in s if char.isdigit() or char in ["-", "+", "."]))
+    return float("".join(char for char in s.replace(",", ".") if char.isdigit() or char in ["-", "+", "."]))
 
 
 def getSecSta(doc):
